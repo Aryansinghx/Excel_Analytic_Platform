@@ -1,0 +1,176 @@
+/* Root palette */
+:root{
+  --nav-bg: #0f172a;          /* deep navy */
+  --nav-bg-hover: #151e35;
+  --text: #e5e7eb;            /* light gray */
+  --muted: #cbd5e1;
+  --brand: #60a5fa;           /* blue-400 */
+  --brand-strong: #3b82f6;    /* blue-500 */
+  --border: rgba(255,255,255,0.08);
+  --shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* Container */
+.nav{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--nav-bg);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav__inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Brand */
+.nav__brand{
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nav__logo{
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  background: #0b1224;
+}
+
+.nav__title{
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--text);
+}
+
+/* Links */
+.nav__links{
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav__link{
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .2s ease, transform .2s ease, background-color .2s ease;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.nav__link:hover{
+  color: var(--text);
+  background: var(--nav-bg-hover);
+  transform: translateY(-1px);
+}
+
+/* CTA link style */
+.nav__link--cta{
+  color: #0b1224;
+  background: var(--brand);
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(59,130,246,0.35);
+}
+
+.nav__link--cta:hover{
+  background: var(--brand-strong);
+  color: white;
+}
+
+/* Mobile toggle (hamburger) */
+.nav__toggle{
+  display: none;
+  width: 44px;
+  height: 38px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.nav__bar{
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 760px){
+  .nav__inner{
+    padding: 10px 14px;
+  }
+
+  .nav__links{
+    position: absolute;
+    top: 60px;
+    right: 14px;
+    background: var(--nav-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    width: 200px;
+    gap: 8px;
+  }
+  .nav__links.is-open{ display: flex; }
+
+  .nav__toggle{ display: inline-flex; }
+}
+
+/* existing variables... */
+
+/* Navbar container (make it fixed at the top) */
+.nav{
+  position: fixed;        /* was: sticky */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;          /* above page content */
+  background: var(--nav-bg);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Give the bar a consistent height */
+.nav__inner{
+  height: 60px;           /* fixed height for offset */
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;        /* vertical padding removed; height handles it */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Mobile dropdown should start below the fixed bar */
+@media (max-width: 760px){
+  .nav__links{
+    top: 70px;            /* 60px bar + 10px gap */
+    /* rest unchanged */
+  }
+}

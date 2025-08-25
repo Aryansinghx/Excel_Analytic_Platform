@@ -1,0 +1,17 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="150" cy="150" r="140" fill="#0d1117" stroke="#00d8ff" stroke-width="6"/>
+  
+  <!-- Atom-like Logo (React-style) -->
+  <ellipse cx="150" cy="150" rx="90" ry="35" stroke="#00d8ff" stroke-width="6" fill="none"/>
+  <ellipse cx="150" cy="150" rx="35" ry="90" stroke="#00d8ff" stroke-width="6" fill="none"/>
+  <ellipse cx="150" cy="150" rx="90" ry="90" transform="rotate(60,150,150)" stroke="#00d8ff" stroke-width="6" fill="none"/>
+  
+  <!-- Center Dot -->
+  <circle cx="150" cy="150" r="15" fill="#00d8ff"/>
+  
+  <!-- App Name -->
+  <text x="50%" y="280" text-anchor="middle" font-size="32" font-family="Arial, Helvetica, sans-serif" fill="#00d8ff">
+    MyApp
+  </text>
+</svg>

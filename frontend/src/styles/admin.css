@@ -1,0 +1,25 @@
+.admin-panel {
+  padding: 20px;
+}
+
+.admin-header {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.admin-table th, .admin-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.admin-table th {
+  background: #222;
+  color: #fff;
+}

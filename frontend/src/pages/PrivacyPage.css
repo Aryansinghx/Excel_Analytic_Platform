@@ -1,0 +1,78 @@
+.privacy-container {
+  padding: 24px;
+  max-width: 800px;
+  margin: auto;
+  background-color: #F9F9F9; /* Light Gray */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Updated space-y using gap */
+}
+
+.privacy-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #3B82F6; /* Blue-500 */
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Add some letter spacing */
+}
+
+.privacy-subtitle {
+  color: #6B7280; /* Gray-500 */
+  text-align: center;
+  font-style: italic; /* Italic style for added flair */
+}
+
+.privacy-description {
+  color: #4B5563; /* Gray-700 */
+  margin-top: 12px;
+  line-height: 1.6; /* Increase line height for readability */
+}
+
+.terms-section {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: #E2E8F0; /* Gray-200 for a subtle background */
+  padding: 16px;
+}
+
+.section-header {
+  font-size: 24px; 
+  font-weight: 700; 
+  color: #187a46; /* Yellow-400 */
+  cursor: pointer;
+  animation: bounce 1s infinite; /* Add animation effect */
+}
+
+.section-content {
+  margin-top: 8px;
+  padding: 16px;
+  border: 2px dashed #FCA5A1; /* Red-300 dashed border */
+  border-radius: 8px;
+  background-color: #FFF; /* White background */
+}
+
+.list {
+  list-style-type: square; /* Change to square list style */
+  padding-left: 20px;
+  margin-top: 8px;
+  color: #1F2937; /* Gray-800 */
+  font-weight: 500; /* Slightly bolder text */
+}
+
+.footer {
+  text-align: center;
+  font-size: 14px;
+  color: #6B7280; /* Gray-500 */
+  margin-top: 24px;
+  text-transform: uppercase; /* Uppercase for footer */
+  letter-spacing: 1px; /* Add some letter spacing */
+}
+
+/* Animation for section-header */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}

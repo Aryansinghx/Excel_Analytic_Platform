@@ -1,0 +1,20 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f2f5;
+}
+
+.auth-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  width: 350px;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
