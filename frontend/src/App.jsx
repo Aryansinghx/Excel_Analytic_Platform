@@ -9,6 +9,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Dashboard from "./pages/DashboardLayout";
 import Contact from './pages/Contact';
+import Login from "./pages/Login";       // 👈 added
+import Register from "./pages/Register"; // 👈 added
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />         {/* 👈 new */}
+          <Route path="/register" element={<Register />} />   {/* 👈 new */}
         </Routes>
       </main>
     </>
