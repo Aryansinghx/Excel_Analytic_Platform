@@ -13,4 +13,20 @@ router.post('/register', (req, res) => {
   res.status(201).json({ message: "User registered", user: { name, email } });
 });
 
+// POST /api/auth/login
+router.post('/login', (req, res) => {
+  const { email, password } = req.body;
+
+  if (!email || !password) {
+    return res.status(400).json({ error: "Email and password required" });
+  }
+
+  // 👉 For now, just mock login
+  if (email === "test@example.com" && password === "123456") {
+    return res.status(200).json({ message: "Login successful", token: "fake-jwt-token" });
+  } else {
+    return res.status(401).json({ error: "Invalid credentials" });
+  }
+});
+
 module.exports = router;
